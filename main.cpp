@@ -10,6 +10,7 @@
 #include <QRegularExpression>
 #include <QPushButton>
 #include <QComboBox>
+#include <string>
 #include <QTest>
 #include <stdexcept>
 
@@ -34,9 +35,11 @@ public:
     void setEngineOn(bool value) { engineOn = value; }
     void setLightsOn(bool value) { lightsOn = value; }
     void setAlarmOn(bool value) { alarmOn = value; }
+    std::string Hello() {return m_hello;}
 
 private:
     int id;
+    std::string m_hello = "hello";
     QString engineType;
     QString year;
     QString brand;
